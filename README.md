@@ -4,7 +4,7 @@
 ## Reaponsive ##
 
 ### Heroku URL ###
-
+https://movieapp-organizer.herokuapp.com/
 
 ### Installing ###
 * run npm install
