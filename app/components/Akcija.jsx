@@ -11,17 +11,15 @@ var Akcija = React.createClass({
     componentWillMount: function() {
         var movies = movieList.getMovie();
         var arr = [];
+        // Checking if there is a word Akcija inside the zanrovi properties. If there is we push it to array arr. At the end we set the state.
         for(var i=0; i<movies.length; i++) {
             var zanr = movies[i].zanrovi;
-            
             if(zanr.indexOf("Akcija") >=0) {
                 arr.push(movies[i]);
             }
-            
             this.setState({
                 list: arr
             });
-         
         }	
     },
     render: function() {
@@ -35,7 +33,6 @@ var Akcija = React.createClass({
                         </div>    
                     </header>
                 </div>
-
                 <div className="row" >
                     {this.state.list.map(function(item) {
                         return (
@@ -48,7 +45,6 @@ var Akcija = React.createClass({
                                             <button type="button" className="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target={`#${item.id}`}>
                                                 {item.title_hr}
                                             </button>
-
                                             <div className="modal fade" id={item.id} tabIndex="-1" role="dialog" aria-labelledby="myModalLabel">
                                                 <div className="modal-dialog" role="document">
                                                     <div className="modal-content">
@@ -73,7 +69,6 @@ var Akcija = React.createClass({
                                                     </div>
                                                 </div>
                                             </div>
-
                                         </div>
                                     </div>
                                 </div>

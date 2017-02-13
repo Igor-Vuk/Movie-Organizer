@@ -1,6 +1,7 @@
 # React Movie Organizer #
 ## Organize your movie collection ##
 ----
+## Reaponsive ##
 
 ### Heroku URL ###
 

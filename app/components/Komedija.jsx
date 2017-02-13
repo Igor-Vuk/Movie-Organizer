@@ -11,17 +11,15 @@ var Komedija = React.createClass({
     componentWillMount: function() {
         var movies = movieList.getMovie();
         var arr = [];
+        // Checking if there is a word Komedija inside the zanrovi properties. If there is we push it to array arr. At the end we set the state.
         for(var i=0; i<movies.length; i++) {
             var zanr = movies[i].zanrovi;
-            
             if(zanr.indexOf("Komedija") >=0) {
                 arr.push(movies[i]);
             }
-            
             this.setState({
                 list: arr
             });
-         
         }	
     },
     render: function() {
@@ -49,7 +47,7 @@ var Komedija = React.createClass({
                                                 {item.title_hr}
                                             </button>
 
-                                            <div className="modal fade" id={item.id} tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                            <div className="modal fade" id={item.id} tabIndex="-1" role="dialog" aria-labelledby="myModalLabel">
                                                 <div className="modal-dialog" role="document">
                                                     <div className="modal-content">
                                                         <div className="modal-header">

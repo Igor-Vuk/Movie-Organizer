@@ -9,6 +9,7 @@ var Movies = React.createClass({
         };
     },
     componentWillMount: function() {
+        // Calling the function getMovie inside movieList component (returns the movies)
         var movies = movieList.getMovie();
         this.setState({
             list: movies
@@ -27,6 +28,7 @@ var Movies = React.createClass({
                 </div>
 
                 <div className="row" >
+                    {/*Iterating over array*/}
                     {this.state.list.map(function(item) {
                         return (
 
@@ -35,6 +37,7 @@ var Movies = React.createClass({
                                     <div className="thumbnail">
                                         <img src={item.image_poster_url}/>
                                         <div className="caption">
+                                            {/*Taking id from from every movie and puting it inside data-target and id. That way we get modal for overy object in array.*/}
                                             <button type="button" className="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target={`#${item.id}`}>
                                                 {item.title_hr}
                                             </button>
@@ -63,7 +66,6 @@ var Movies = React.createClass({
                                                     </div>
                                                 </div>
                                             </div>
-
                                         </div>
                                     </div>
                                 </div>

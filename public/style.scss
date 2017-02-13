@@ -6,27 +6,29 @@ body {
     background-color: $background-color;
 }
 
-
-
 .thumbnail img {
-    // your styles for the image
     width: auto;
     height: 300px;
+
+    .caption {
+        text-align: center;  
+    }
 }
 
- .caption {
-    text-align: center;  
-}
+ 
 
 ul {
   list-style-type: none;
- 
-}
-li {
+
+  li {
      text-align: left;
      line-height: 2;
+
+        .upper {
+            text-transform: uppercase;
+        }
+    }
 }
 
-.upper {
-    text-transform: uppercase;
-}
+
+

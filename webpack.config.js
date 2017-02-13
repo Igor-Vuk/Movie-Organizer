@@ -2,8 +2,8 @@ var webpack = require("webpack");
 
 module.exports = {
     entry: [
-        "script!jquery/dist/jquery.min.js",
-        "script!bootstrap/dist/js/bootstrap.min.js",
+        "jquery/dist/jquery.min.js",
+        "bootstrap/dist/js/bootstrap.min.js",
         "./app/app.jsx"
     ],
     plugins: [

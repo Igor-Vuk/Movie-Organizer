@@ -11,17 +11,15 @@ var Animirani = React.createClass({
     componentWillMount: function() {
         var movies = movieList.getMovie();
         var arr = [];
+        // Checking if there is a word Animirani inside the zanrovi properties. If there is we push it to array arr. At the end we set the state.
         for(var i=0; i<movies.length; i++) {
             var zanr = movies[i].zanrovi;
-            
             if(zanr.indexOf("Animirani") >=0) {
                 arr.push(movies[i]);
             }
-            
             this.setState({
                 list: arr
             });
-         
         }	
     },
     render: function() {
@@ -48,8 +46,7 @@ var Animirani = React.createClass({
                                             <button type="button" className="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target={`#${item.id}`}>
                                                 {item.title_hr}
                                             </button>
-
-                                            <div className="modal fade" id={item.id} tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                            <div className="modal fade" id={item.id} tabIndex="-1" role="dialog" aria-labelledby="myModalLabel">
                                                 <div className="modal-dialog" role="document">
                                                     <div className="modal-content">
                                                         <div className="modal-header">
@@ -73,7 +70,6 @@ var Animirani = React.createClass({
                                                     </div>
                                                 </div>
                                             </div>
-
                                         </div>
                                     </div>
                                 </div>
