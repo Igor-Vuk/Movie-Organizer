@@ -1,0 +1,32 @@
+$title-color: #555;
+$background-color: #f9f9f9;
+
+body {
+    color: $title-color;
+    background-color: $background-color;
+}
+
+
+
+.thumbnail img {
+    // your styles for the image
+    width: auto;
+    height: 300px;
+}
+
+ .caption {
+    text-align: center;  
+}
+
+ul {
+  list-style-type: none;
+ 
+}
+li {
+     text-align: left;
+     line-height: 2;
+}
+
+.upper {
+    text-transform: uppercase;
+}
