@@ -9,6 +9,7 @@
 ### Installing ###
 * run npm install
 * start the server
+* visit localhost 300
 
 ### Requirements ###
 * Node.js
